@@ -205,3 +205,52 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+
+# VSCode settings
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Data files (raw & processed)
+Data/raw/
+Data/processed/filtered_complaints.csv
+
+# Vector database files
+vector_store/chromadb/
+
+# Model and cache files
+*.model
+*.h5
+*.pkl
+*.joblib
+*.pt
+*.onnx
+
+# Logs and temporary files
+*.log
+*.tmp
+
+
+
+# Python packaging artifacts
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Jupyter Notebook hidden history
+*.~nbconvert.ipynb
+
+# Others
+*.bak
