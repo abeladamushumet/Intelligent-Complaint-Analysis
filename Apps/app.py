@@ -50,7 +50,6 @@ with gr.Blocks() as demo:
     )
 
     output_text = gr.Textbox(label="Answer with Sources", lines=10)
-
     submit_btn = gr.Button("Ask")
     submit_btn.click(fn=answer_question, inputs=[user_input, product_dropdown], outputs=output_text)
 
