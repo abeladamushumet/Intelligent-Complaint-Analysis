@@ -15,10 +15,10 @@ def load_embedding_model(model_path=None, model_name='all-MiniLM-L6-v2'):
         SentenceTransformer: Loaded embedding model.
     """
     if model_path and os.path.exists(model_path):
-        print(f"🔒 Loading embedding model from local path: {model_path}")
+        print(f"Loading embedding model from local path: {model_path}")
         return SentenceTransformer(model_path)
     else:
-        print(f"🌐 Downloading embedding model from Hugging Face: {model_name}")
+        print(f"Downloading embedding model from Hugging Face: {model_name}")
         return SentenceTransformer(model_name)
 
 def embed_texts(model, texts):
@@ -45,7 +45,7 @@ if __name__ == "__main__":
     base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../Data/processed"))
     csv_path = os.path.join(base_dir, "filtered_complaints.csv")
 
-    print(f"📄 Loading data from: {csv_path}")
+    print(f"Loading data from: {csv_path}")
     df = pd.read_csv(csv_path)
 
     # Select sample texts
@@ -55,8 +55,8 @@ if __name__ == "__main__":
     local_model_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../models/all-MiniLM-L6-v2-local"))
     model = load_embedding_model(model_path=local_model_path)
 
-    print(f"🧠 Embedding {len(sample_texts)} sample texts...")
+    print(f"Embedding {len(sample_texts)} sample texts...")
     embeddings = embed_texts(model, sample_texts)
 
-    print(f"✅ Embeddings shape: {embeddings.shape}")
-    print(f"🔍 First vector (10 dims): {embeddings[0][:10]}")
+    print(f"Embeddings shape: {embeddings.shape}")
+    print(f"First vector (10 dims): {embeddings[0][:10]}")

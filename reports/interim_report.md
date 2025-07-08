@@ -9,19 +9,19 @@ CrediTrust Financial is a fast-growing digital finance company operating in East
 
 ### 2.1 Dataset Overview  
 - Source: Consumer Financial Protection Bureau (CFPB) complaint dataset  
-- Total records loaded: **[Insert total number]**  
+- Total records loaded: **[9,609,797]**  
 - Key fields: Product, Consumer complaint narrative, Issue label, Submission date  
 
 ### 2.2 Filtering and Cleaning  
-- Focused on 5 products: Credit Cards, Personal Loans, Buy Now Pay Later (BNPL), Savings Accounts, Money Transfers  
+- Focused on 5 products: Credit Cards, Personal Loans, Buy Now Pay Later (BNPL), Savings Accounts and Money Transfers  
 - Removed complaints with empty or missing narratives  
 - Cleaned text by lowercasing, removing special characters, and boilerplate phrases  
-- Final dataset size after filtering: **[Insert number]**  
+- Final dataset size after filtering: **[80,667]**  
 
 ### 2.3 Data Insights  
-- Distribution of complaints by product category (e.g., BNPL had X% of complaints)  
+- Distribution of complaints by product category 
 - Narrative length varied widely, from very short to very long texts  
-- Identified some common issue types and recurring keywords (to be explored further)  
+- Identified some common issue types and recurring keywords 
 
 ---
 
