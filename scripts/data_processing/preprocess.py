@@ -12,7 +12,7 @@ def clean_text(text):
     if not isinstance(text, str):
         return ""
     text = text.lower()
-    # Remove boilerplate phrases common in complaints (customize as needed)
+    # Remove boilerplate phrases common in complaints 
     boilerplate_patterns = [
         r"i am writing to file a complaint",
         r"this is a complaint regarding",
@@ -48,7 +48,7 @@ def preprocess_dataset(input_csv, output_csv, valid_products):
     print("Cleaning complaint narratives...")
     df_filtered['Cleaned Narrative'] = df_filtered['Consumer complaint narrative'].apply(clean_text)
 
-    # Optional: Remove rows where cleaning results in empty narrative
+    # Remove rows where cleaning results in empty narrative
     df_filtered = df_filtered[df_filtered['Cleaned Narrative'].str.strip() != ""]
     print(f"Dataset size after cleaning empty narratives: {len(df_filtered):,}")
 
